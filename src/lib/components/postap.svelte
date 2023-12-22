@@ -186,7 +186,7 @@ p {
 
 
 /* Media Queries Tablet */
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   h1 {
     font-size: 4em;
 
@@ -210,7 +210,7 @@ p {
 }
 
 /* Media Queries Mobile */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   h1 {
     font-size: 3em;
     left: 0.70em;
