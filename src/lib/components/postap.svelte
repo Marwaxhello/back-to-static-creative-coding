@@ -249,7 +249,7 @@ p {
   }
 
   img {
-    top: 50%;
+    top: 58%;
     width: 200px;
     height: 250px;
   }
