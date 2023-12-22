@@ -244,6 +244,7 @@ p {
     font-size: 0.8em;
     width: 78%;
     top: 45%;
+    right: 1em;
   }
 
   img {
