@@ -249,6 +249,7 @@ p {
 
   img {
     top: 50%;
+    right: 20%;
     width: 200px;
     height: 250px;
   }
