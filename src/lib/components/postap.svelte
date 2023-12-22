@@ -184,9 +184,32 @@ p {
     height: 450px;
   }
 
+/* Media Queries Tablet */
+/* @media only screen and (min-width: 1025px)
+  h1 {
+    font-size: 5em;
+
+  }
+
+  p {
+    font-size: 1em;
+    width: 80%;
+    top: 40%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+
+  img {
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 350px;
+  }
+} */
 
 /* Media Queries Tablet */
-@media (max-width: 770px) {
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
   h1 {
     font-size: 4em;
 
