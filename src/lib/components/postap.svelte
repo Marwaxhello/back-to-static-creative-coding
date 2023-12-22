@@ -1,7 +1,17 @@
 <script></script>
 
 <main>
-  <h1>post apocalyptic soul lake</h1>
+  <h1>post apocalyptic thinking</h1>
+  <p>
+    After the apocalypse, cities crumbled into silence. Dust-choked winds
+    whisper through skeletal skyscrapers, and the sky weeps in hues of blood and
+    ash. Survivors, faces etched with fear, scavenge a world that no longer
+    recognizes mercy. A once-vibrant civilization is now reduced to shadows and
+    ruins. The future is uncertain, a tapestry woven with threads of decay and
+    despair. Amidst the darkness, resilient hearts endure, seeking a glimmer of
+    hope in the unforgiving aftermath. In the ruins, the echoes of the past may
+    guide survivors toward an uncertain tomorrow.
+  </p>
 
   <section class="waveWrapper waveAnimation">
     <article class="waveWrapperInner bgTop">
@@ -25,28 +35,57 @@
       ></aside>
     </article>
 
-    <img
-      src="./bloody-handprint-4.png"
-      alt="bloody handprint"
-      style="width: 100px; height: 100px;"
-      loading="lazy"
-    />
+    <img src="./bloody-handprint-4.png" alt="bloody handprint" loading="lazy" />
   </section>
-
 </main>
 
 <style>
   @import url("https://fonts.cdnfonts.com/css/apocalypse");
 
-  h1 {
-    font-family: "Apocalypse", sans-serif;
-    font-size: 5em;
-    color: #b00808;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999; /* Ensure the h1 is on top */
+ h1 {
+  font-family: "Apocalypse", sans-serif;
+  font-size: 7em;
+  color: #b00808;
+  position: absolute;
+  left: 1em;
+  margin-top: 2em;
+  z-index: 999; /* Ensure the h1 is on top */
+  animation: fallHard 2s cubic-bezier(0.4, 0, 0.2, 1), fall 5s ease-in-out; /* Combine both animations */
+  text-align: left;
+}
+
+p {
+  font-family: "Apocalypse", sans-serif;
+  font-size: 1.3em;
+  color: white;
+  position: absolute;
+  z-index: 999; /* Ensure the h1 is on top */
+  text-align: left;
+  width: 50%; /* Adjust the width as needed */
+  top: 45%;
+  left: 31.5%;
+  transform: translateX(-50%);
+  opacity: 50%;
+}
+
+  @keyframes fallHard {
+    0% {
+      transform: translateY(-100vh);
+    }
+
+    50% {
+      transform: translateY(-25vh);
+      opacity: 1;
+    }
+
+    25%,
+    55%,
+    75%,
+    87%,
+    97%,
+    100% {
+      transform: translateY(0);
+    }
   }
 
   @keyframes move_wave {
@@ -58,6 +97,20 @@
     }
     100% {
       transform: translateX(-50%) translateZ(0) scaleY(1);
+    }
+  }
+
+  @keyframes glitch {
+    2%,
+    64% {
+      transform: translate(2px, 0) skew(0deg);
+    }
+    4%,
+    60% {
+      transform: translate(-2px, 0) skew(0deg);
+    }
+    62% {
+      transform: translate(0, 0) skew(5deg);
     }
   }
 
@@ -122,50 +175,58 @@
 
   img {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    top: 40%;
+    left: 60%;
+    z-index: 1000;
+    rotate: 9deg;
+    animation: glitch 4s linear infinite;
+    width: 400px;
+    height: 450px;
+  }
+
+
+/* Media Queries Tablet */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4em;
+
+  }
+
+  p {
+    font-size: 1em;
+    width: 80%;
     top: 50%;
-    left: 90%;
-    z-index: 1000; /* Set a higher z-index to make sure it's above the waves */
-    /* Additional styling if needed */
-    rotate: 10deg;
-    
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   img {
-    position: absolute;
-    width: 50%; /* Responsive width */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 600px; /* Limit maximum width */
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 350px;
+  }
+}
+
+/* Media Queries Mobile */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3em;
+    left: 0.70em;
+    right: 1em;
+  }
+
+  p {
+    font-size: 0.8em;
+    width: 78%;
+    top: 45%;
+  }
+
+  img {
     top: 50%;
-    left: 20%;
-    z-index: 1000;
-    /* Set a higher z-index to make sure it's above the waves */
-    /* Additional styling if needed */
-    rotate: 10deg;
+    width: 200px;
+    height: 250px;
   }
-
-  /* Responsive Font Size for Mobile */
-  @media screen and (max-width: 480px) {
-    h1 {
-      font-size: 3em;
-    }
-    img {
-      top: 60%;
-      left: 10%;
-      margin: 0;
-    }
-  }
-
-  /* Responsive Font Size for Tablet */
-  @media screen and (min-width: 481px) and (max-width: 820px) {
-    h1 {
-      font-size: 4em;
-    }
-    img {
-      top: 60%;
-      left: 20%;
-      margin: 0;
-    }
-  }
+}
 </style>
