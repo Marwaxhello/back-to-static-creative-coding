@@ -222,7 +222,7 @@
       left: 0.7em;
       right: 1em;
       margin-right: 2em;
-      top:20%;
+      top:30%;
     }
 
     p {
