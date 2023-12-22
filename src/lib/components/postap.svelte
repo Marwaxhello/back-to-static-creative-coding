@@ -1,4 +1,6 @@
-<script></script>
+<script>
+  
+</script>
 
 <main>
   <h1>post apocalyptic thinking</h1>
@@ -42,32 +44,46 @@
 <style>
   @import url("https://fonts.cdnfonts.com/css/apocalypse");
 
- h1 {
-  font-family: "Apocalypse", sans-serif;
-  font-size: 7em;
-  color: #b00808;
-  position: absolute;
-  left: 1em;
-  margin-top: 2em;
-  z-index: 999; /* Ensure the h1 is on top */
-  animation: fallHard 2s cubic-bezier(0.4, 0, 0.2, 1), fall 5s ease-in-out; /* Combine both animations */
-  text-align: left;
-}
+  h1 {
+    font-family: "Apocalypse", sans-serif;
+    font-size: 7em;
+    color: #b00808;
+    position: absolute;
+    left: 1em;
+    margin-top: 2em;
+    z-index: 999; /* Ensure the h1 is on top */
+    animation:
+      fallHard 2s cubic-bezier(0.4, 0, 0.2, 1),
+      fall 5s ease-in-out; /* Combine both animations */
+    text-align: left;
+  }
 
-p {
-  font-family: "Apocalypse", sans-serif;
-  font-size: 1.3em;
-  color: white;
-  position: absolute;
-  z-index: 999; /* Ensure the h1 is on top */
-  text-align: left;
-  width: 50%; /* Adjust the width as needed */
-  top: 45%;
-  left: 31.5%;
-  transform: translateX(-50%);
-  opacity: 50%;
-}
+  p {
+    font-family: "Apocalypse", sans-serif;
+    font-size: 1.3em;
+    color: white;
+    position: absolute;
+    z-index: 999; /* Ensure the h1 is on top */
+    text-align: left;
+    width: 50%; /* Adjust the width as needed */
+    top: 45%;
+    left: 31.5%;
+    transform: translateX(-50%);
+    opacity: 50%;
+  }
 
+  img {
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    z-index: 1000;
+    rotate: 9deg;
+    animation: glitch 4s linear infinite;
+    width: 400px;
+    height: 450px;
+  }
+
+  /* Keyframes */
   @keyframes fallHard {
     0% {
       transform: translateY(-100vh);
@@ -173,85 +189,54 @@ p {
     animation: move_wave 15s linear infinite;
   }
 
-  img {
-    position: absolute;
-    top: 40%;
-    left: 60%;
-    z-index: 1000;
-    rotate: 9deg;
-    animation: glitch 4s linear infinite;
-    width: 400px;
-    height: 450px;
+  /* Media Queries Tablet */
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    h1 {
+      font-size: 4em;
+      left: 1.4em;
+      top:20%;
+      
+    }
+
+    p {
+      font-size: 1.2em;
+      width: 80%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    img {
+      top: 55%;
+      left: 65%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 350px;
+    }
   }
 
-/* Media Queries Tablet */
-/* @media only screen and (min-width: 1025px)
-  h1 {
-    font-size: 5em;
+  /* Media Queries Mobile */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 3em;
+      left: 0.7em;
+      right: 1em;
+      margin-right: 2em;
+      top:10%;
+    }
 
+    p {
+      font-size: 0.8em;
+      width: 78%;
+      top: 45%;
+      margin-left: 4.5em;
+      right: 1em;
+    }
+
+    img {
+      top: 58%;
+      width: 200px;
+      height: 250px;
+    }
   }
-
-  p {
-    font-size: 1em;
-    width: 80%;
-    top: 40%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-  }
-
-  img {
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 350px;
-  }
-} */
-
-/* Media Queries Tablet */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-  h1 {
-    font-size: 4em;
-
-  }
-
-  p {
-    font-size: 1em;
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  img {
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 350px;
-  }
-}
-
-/* Media Queries Mobile */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 3em;
-    left: 0.70em;
-    right: 1em;
-  }
-
-  p {
-    font-size: 0.8em;
-    width: 78%;
-    top: 45%;
-    margin-left: 4.5em;
-    right: 1em;
-  }
-
-  img {
-    top: 58%;
-    width: 200px;
-    height: 250px;
-  }
-}
 </style>
