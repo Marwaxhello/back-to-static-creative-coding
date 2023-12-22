@@ -244,12 +244,12 @@ p {
     font-size: 0.8em;
     width: 78%;
     top: 45%;
+    margin-left: 4.5em;
     right: 1em;
   }
 
   img {
     top: 50%;
-    right: 20%;
     width: 200px;
     height: 250px;
   }
