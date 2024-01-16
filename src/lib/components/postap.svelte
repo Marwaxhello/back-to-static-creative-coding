@@ -37,7 +37,7 @@
       ></aside>
     </article>
 
-    <img src="./bloody-handprint-4.png" alt="bloody handprint" loading="lazy" />
+    <img src="assets/bloody-handprint-4.png" alt="bloody handprint" loading="lazy" />
   </section>
 </main>
 
